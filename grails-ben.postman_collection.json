@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "992b8b50-445f-49ab-b640-8626da5abbef",
+		"name": "grails-ben",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22093507"
+	},
+	"item": [
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "GetAllMessages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/messages/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Get1Message",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/message/430"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dateCreated\": \"2023-11-11\",\n\t\"score\": 0,\n\t\"lastUpdated\": \"2023-11-11\",\n\t\"post\": {\n\t\t\"id\": 73\n\t},\n\t\"content\": \"Message posté sur le 73\",\n\t\"author\": {\n\t\t\"id\": 2\n\t}\n}"
+						},
+						"url": "localhost:8080/api/messages"
+					},
+					"response": []
+				},
+				{
+					"name": "EditMessage",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "localhost:8080/api/message/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EditFullMessage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"score\": 10,\n\t\"content\": \"Message update avec PUT\",\t\n}"
+						},
+						"url": "localhost:8080/api/message/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMessage",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/message/430"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "GetAllPosts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get1Post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/post/7"
+					},
+					"response": []
+				},
+				{
+					"name": "EditPost",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "localhost:8080/api/post/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EditFullPost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"POST Modifié avec PUT\",\n\t\"score\": 0,\n\t\"content\": \"Test d'un post fait avec une requête POST.\",\n}"
+						},
+						"url": "localhost:8080/api/post/2"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/post/7"
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"POST INCROYABLEE\",\n\t\"dateCreated\": \"2023-11-13\",\n\t\"score\": 0,\n\t\"lastUpdated\": \"2023-11-13\",\n\t\"community\": {\n\t\t\"id\": 1\n\t},\n\t\"content\": \"Test d'un post fait avec une requête POST.\",\n\t\"author\": {\n\t\t\"id\": 1\n\t},\n\t\"messages\": [\n\t\t{\n\t\t\t\"id\": 6\n\t\t},\n\t\t{\n\t\t\t\"id\": 4\n\t\t},\n\t\t{\n\t\t\t\"id\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2\n\t\t},\n\t\t{\n\t\t\t\"id\": 5\n\t\t},\n\t\t{\n\t\t\t\"id\": 3\n\t\t}\n\t]\n}"
+						},
+						"url": "localhost:8080/api/posts"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Communities",
+			"item": [
+				{
+					"name": "GetAllCommunities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							}
+						],
+						"url": "localhost:8080/api/communities"
+					},
+					"response": []
+				},
+				{
+					"name": "Get1Community",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "localhost:8080/api/community/1"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCommunity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t \"name\" : \"Communauté Test\",\n    \"description\" : \"Description de communauté\",\n    \"dateCreated\": \"2023-11-11\",\n    \"lastUpdated\" : \"2023-11-11\",\n    \"author\": { \"id\" : 1 }\n}"
+						},
+						"url": "localhost:8080/api/communities"
+					},
+					"response": []
+				},
+				{
+					"name": "EditCommunity",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t \"name\" : \"Communauté Test Patch\",\n}"
+						},
+						"url": "localhost:8080/api/community/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCommunity",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "localhost:8080/api/community/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EditFullCommunity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"posts\": [],\n\t\"banner\": {\n\t\t\"id\": 1\n\t},\n\t\"author\": {\n\t\t\"id\": 1\n\t},\n\t\"members\": [\n\t\t{\n\t\t\t\"id\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 3\n\t\t}\n\t],\n\t\"name\": \"Communauté Test PUT\",\n\t\"thumbnail\": {\n\t\t\"id\": 2\n\t},\n}"
+						},
+						"url": "localhost:8080/api/community/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "X-Auth",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTdlVcL2JRQlJcL1RoTlJnVlNnRWtnZFlBRTI1RWgwek1SbjFjb05xR2tXa0VBWCsrRWVuT1wvTTNSbVNwY3BFaHd5cGFKRXFkZTNJZjlJdVwvUU5RTzNSbDd0cDNodURBZ25xVFwvZTduMzlmenhSVlVqSWJuc1daY0dEOFZXY3lsYjFMTlpXd3d6RFMzSFQ4enFDTzBPZUpGRG16U0JLNlBWd0l2Z0JLUExEd05EdGd4cXdvbTQrcG02d0JEVzJ0cldGSTZ2bUhjMXl6QkU2VVBcL1Z2dVVHbThJMUJRZTk5S01MSU5reXdNVlNadFhjbjFkc28xUnRzd1Vjd0NGUjY2MFZSSU55Z3RaOElNUTBkUXNwYkFLSUF4bHRsM2lsUTVHZ3ZqMTJZenkwVzFnYllXd09PVUdVUHU3aVZwV0dmZDNUdWJraEljd1hzb3QxT1BEblczNEtDKzRcL0ZYbFJDVW1pdHA1cHN5VVJIZjUwNmMrTHN6WnpcLzdYN3ZORWdCMXN2andOOFg4MlFwMHYrXC8rbmMyTDlrSUwwMFBXQzFpdG5aS2J5WUw1clVhbmZQbGw2OVA1MVllZFI2VHNFQnZcL3Y0XC81NVp2bU9xc3FTWmxtVmczdGlHaFB5dTZaeUZjZUpoOXNvZU0zZUpJS3BEOUtXb3h1SlFwaWlsdldTZ3o2dGpENlpqTlkzMXRlZVwvMnk3bDRyTEVxNEpOVW5lV2kzTFQ5UXRLdmVuNDhcLytuT1wvaU9FVlZJNlp5SkE2bnloQTlTeHBvVDY5T0o4WitcL3k3bHljWVwvTTNcL0FNaDBvOTRSQXdBQSIsInN1YiI6ImFkbWluIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJTcHJpbmcgU2VjdXJpdHkgUkVTVCBHcmFpbHMgUGx1Z2luIiwiZXhwIjoxNjk5NjEyMzM1LCJpYXQiOjE2OTk2MDg3MzV9.ri4KXmp8slKxiadXbmQ0_iyri9wSihpKz67dQAX_VUU"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get1User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTdlVcL2JRQlJcL1RoTlJnVlNnRWtnZFlBRTI1RWgwek1SbjFjb05xR2tXa0VBWCsrRWVuT1wvTTNSbVNwY3BFaHd5cGFKRXFkZTNJZjlJdVwvUU5RTzNSbDd0cDNodURBZ25xVFwvZTduMzlmenhSVlVqSWJuc1daY0dEOFZXY3lsYjFMTlpXd3d6RFMzSFQ4enFDTzBPZUpGRG16U0JLNlBWd0l2Z0JLUExEd05EdGd4cXdvbTQrcG02d0JEVzJ0cldGSTZ2bUhjMXl6QkU2VVBcL1Z2dVVHbThJMUJRZTk5S01MSU5reXdNVlNadFhjbjFkc28xUnRzd1Vjd0NGUjY2MFZSSU55Z3RaOElNUTBkUXNwYkFLSUF4bHRsM2lsUTVHZ3ZqMTJZenkwVzFnYllXd09PVUdVUHU3aVZwV0dmZDNUdWJraEljd1hzb3QxT1BEblczNEtDKzRcL0ZYbFJDVW1pdHA1cHN5VVJIZjUwNmMrTHN6WnpcLzdYN3ZORWdCMXN2andOOFg4MlFwMHYrXC8rbmMyTDlrSUwwMFBXQzFpdG5aS2J5WUw1clVhbmZQbGw2OVA1MVllZFI2VHNFQnZcL3Y0XC81NVp2bU9xc3FTWmxtVmczdGlHaFB5dTZaeUZjZUpoOXNvZU0zZUpJS3BEOUtXb3h1SlFwaWlsdldTZ3o2dGpENlpqTlkzMXRlZVwvMnk3bDRyTEVxNEpOVW5lV2kzTFQ5UXRLdmVuNDhcLytuT1wvaU9FVlZJNlp5SkE2bnloQTlTeHBvVDY5T0o4WitcL3k3bHljWVwvTTNcL0FNaDBvOTRSQXdBQSIsInN1YiI6ImFkbWluIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJTcHJpbmcgU2VjdXJpdHkgUkVTVCBHcmFpbHMgUGx1Z2luIiwiZXhwIjoxNjk5NjEyMzM1LCJpYXQiOjE2OTk2MDg3MzV9.ri4KXmp8slKxiadXbmQ0_iyri9wSihpKz67dQAX_VUU"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"url": "localhost:8080/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"TestUser\",\n\t\"password\": \"TestUser\",\n\t\"email\": \"test.user@mail.com\",\n\t\"bio\": \"Je suis un user test\"\n}"
+						},
+						"url": "localhost:8080/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"TestUserUpdated\",\n\t\"password\": \"TestUserUpdated\",\n\t\"email\": \"test.userPUT@mail.com\",\n\t\"communities\" : {\n\t\t\"id\" : 1\n\t}\n}"
+						},
+						"url": "localhost:8080/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							}
+						],
+						"url": "localhost:8080/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.0"
+							},
+							{
+								"key": "Accept",
+								"value": "json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"TestUser modifié avec un patch\"\n}"
+						},
+						"url": "localhost:8080/api/user/7"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoginAdmin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"admin\"\n}"
+				},
+				"url": "localhost:8080/api/login"
+			},
+			"response": []
+		}
+	]
+}
